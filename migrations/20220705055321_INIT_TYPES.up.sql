@@ -182,11 +182,12 @@ CREATE TYPE directions_enum AS ENUM (
 CREATE DOMAIN direction AS
     directions_enum NOT NULL;
 
+
+-- -- Create new TYPE or DOMAIN and suppres error if its exists.
 -- DO $$ BEGIN
---  ...
+--  -- ...
 -- EXCEPTION
 --     WHEN duplicate_object THEN NULL;
 -- END $$;
-
 
 COMMIT;
